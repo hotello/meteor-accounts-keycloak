@@ -9,10 +9,11 @@ As any official Meteor account package, upsert a configuration object:
 ```js
 ServiceConfiguration.configurations.upsert({service: 'keycloak'}, {
   $set: {
-    authServerUrl: '<KEYCLOAK_SERVER_URL>',
+    serverUrl: '<KEYCLOAK_SERVER_URL>',
     realm: '<REALM_NAME>',
     clientId: '<CLIENT_ID>',
-    secret: '<SECRET>'
+    realmPublicKey: '<PUBLIC_KEY>',
+    bearerOnly: true
   }
 });
 ```
